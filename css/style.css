@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&display=swap');
 
 * {
     margin: 0;
@@ -20,8 +18,6 @@ body {
     line-height: 1.6;
 }
 
-/* SMOKE BACKGROUND */
-
 .smoke-bg {
     position: fixed;
     inset: 0;
@@ -32,8 +28,6 @@ body {
     filter: blur(100px);
     z-index: -1;
 }
-
-/* HERO */
 
 .hero {
     min-height: 65vh;
@@ -49,76 +43,58 @@ body {
 }
 
 .logo {
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Pirata One', cursive;
     font-size: clamp(4rem, 9vw, 7rem);
     color: #ffffff;
     letter-spacing: 2px;
-    transform: rotate(-1deg);
-
     text-shadow:
-        0 0 8px rgba(255,255,255,.45),
-        0 0 18px rgba(255,255,255,.22),
-        0 0 35px rgba(180,180,180,.12);
+        0 0 10px rgba(255,255,255,.25),
+        0 0 20px rgba(255,255,255,.10);
 }
 
 .tagline {
-    margin-top: 14px;
+    margin-top: 12px;
     font-size: 1rem;
     color: #bdbdbd;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 
-/* SHARED TITLE STYLE */
-
 .about h2,
 .section-title,
 .footer-booking h2,
 footer h3 {
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Cinzel', serif;
     color: #ffffff;
-    letter-spacing: 2px;
-
+    letter-spacing: 3px;
+    text-align: center;
     text-shadow:
         0 0 6px rgba(255,255,255,.35),
-        0 0 18px rgba(255,255,255,.16);
-
-    position: relative;
-    display: block;
-    text-align: center;
+        0 0 18px rgba(255,255,255,.12);
+    margin-bottom: 20px;
 }
-
-/* SMALL UNDERLINE GLOW UNDER TITLES */
 
 .about h2::after,
 .section-title::after,
 .footer-booking h2::after {
     content: "";
     display: block;
-    width: 70%;
-    max-width: 280px;
+    width: 100px;
     height: 1px;
-    margin: 10px auto 0;
+    margin: 12px auto 0;
     background: linear-gradient(
         to right,
         transparent,
-        rgba(255,255,255,.75),
+        rgba(255,255,255,.8),
         transparent
     );
 }
-
-/* ABOUT */
 
 .about {
     max-width: 900px;
     margin: auto;
     padding: 50px 20px;
     text-align: center;
-}
-
-.about h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
 }
 
 .about p {
@@ -128,16 +104,13 @@ footer h3 {
     margin: auto;
 }
 
-/* FEATURED WORK */
-
 .slideshow-section {
     padding: 40px 20px;
     text-align: center;
 }
 
 .section-title {
-    font-size: 3rem;
-    margin-bottom: 25px;
+    font-size: 2.8rem;
 }
 
 .slideshow-container {
@@ -148,11 +121,9 @@ footer h3 {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
-
     border: 1px solid rgba(255,255,255,.12);
-
     box-shadow:
-        0 0 20px rgba(255,255,255,.06),
+        0 0 20px rgba(255,255,255,.05),
         0 0 60px rgba(0,0,0,.75);
 }
 
@@ -163,14 +134,12 @@ footer h3 {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 4s ease-in-out;
 }
 
 .slide.active {
     opacity: 1;
 }
-
-/* FOOTER */
 
 footer {
     padding: 60px 20px;
@@ -179,21 +148,21 @@ footer {
 }
 
 .footer-booking {
-    margin-bottom: 40px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .footer-booking h2 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
+    font-size: 2.3rem;
 }
 
 .footer-book-btn {
     display: inline-block;
-    margin-top: 10px;
     padding: 18px 42px;
-    background: #ffffff;
-    color: #000000;
+    background: white;
+    color: black;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
@@ -204,16 +173,13 @@ footer {
 .footer-book-btn:hover {
     transform: translateY(-4px);
     box-shadow:
-        0 10px 25px rgba(255,255,255,.15),
-        0 0 20px rgba(255,255,255,.12);
+        0 10px 25px rgba(255,255,255,.15);
 }
 
 footer h3 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 25px;
 }
-
-/* SOCIAL ICONS */
 
 .socials {
     display: flex;
@@ -227,16 +193,12 @@ footer h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: 1px solid #333;
     border-radius: 50%;
-
     color: white;
     font-size: 1.8rem;
     text-decoration: none;
-
     background: rgba(255,255,255,.02);
-
     transition: all .3s ease;
 }
 
@@ -244,12 +206,9 @@ footer h3 {
     transform: translateY(-5px);
     border-color: white;
     background: rgba(255,255,255,.06);
-
     box-shadow:
         0 0 20px rgba(255,255,255,.15);
 }
-
-/* REVEAL ANIMATION */
 
 .reveal {
     opacity: 0;
@@ -262,17 +221,13 @@ footer h3 {
     transform: translateY(0);
 }
 
-/* MOBILE */
-
 @media (max-width: 768px) {
-
     .hero {
         min-height: 55vh;
     }
 
     .logo {
         font-size: 3.8rem;
-        letter-spacing: 1px;
     }
 
     .tagline {
@@ -280,18 +235,20 @@ footer h3 {
     }
 
     .slideshow-container {
-        max-width: 350px;
-        height: 350px;
-    }
+    width: 90vw;
+    max-width: 350px;
+    height: 90vw;
+    max-height: 350px;
+}
 
     .about h2,
     .section-title,
     .footer-booking h2 {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 
     footer h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .socials a {
