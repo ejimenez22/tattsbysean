@@ -1,4 +1,6 @@
-// Reveal Animation
+// ======================
+// REVEAL ANIMATION
+// ======================
 
 const reveals = document.querySelectorAll('.reveal');
 
@@ -12,19 +14,26 @@ const observer = new IntersectionObserver((entries) => {
 
     });
 
+}, {
+    threshold: 0.15
 });
 
 reveals.forEach((element) => {
     observer.observe(element);
 });
 
-// Slideshow
+
+// ======================
+// FEATURED WORK SLIDESHOW
+// ======================
 
 const slides = document.querySelectorAll('.slide');
 
 let currentSlide = 0;
 
 function nextSlide() {
+
+    if (slides.length === 0) return;
 
     slides[currentSlide].classList.remove('active');
 
@@ -37,20 +46,19 @@ function nextSlide() {
     slides[currentSlide].classList.add('active');
 }
 
-// 10 seconds
+// Ensure first image is active
 
-setInterval(nextSlide, 10000);
+if (slides.length > 0) {
+    slides[0].classList.add('active');
+}
 
-// Booking Form
+// Change image every 8 seconds
 
-const form = document.querySelector('form');
+setInterval(nextSlide, 8000);
 
-form.addEventListener('submit', (e) => {
 
-    e.preventDefault();
+// ======================
+// CONSOLE MESSAGE
+// ======================
 
-    alert('Thanks for reaching out! Sean will contact you soon.');
-
-    form.reset();
-
-});
+console.log('TattsBySean website loaded successfully');

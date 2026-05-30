@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,109 +14,155 @@ html {
 
 body {
     background: #050505;
-    color: white;
-    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* Smoke Background */
+/* SMOKE BACKGROUND */
 
 .smoke-bg {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.05), transparent 40%),
-        radial-gradient(circle at 80% 60%, rgba(255,255,255,.03), transparent 40%);
-    filter: blur(80px);
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.06), transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(255,255,255,.04), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(255,255,255,.03), transparent 50%);
+    filter: blur(100px);
     z-index: -1;
 }
 
-/* Hero */
+/* HERO */
 
 .hero {
-    min-height: 100vh;
+    min-height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 1000px;
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
-    font-size: 5rem;
-    letter-spacing: 6px;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(4rem, 9vw, 7rem);
+    color: #ffffff;
+    letter-spacing: 2px;
+    transform: rotate(-1deg);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.45),
+        0 0 18px rgba(255,255,255,.22),
+        0 0 35px rgba(180,180,180,.12);
 }
 
 .tagline {
-    margin-top: 20px;
-    font-size: 1.2rem;
+    margin-top: 14px;
+    font-size: 1rem;
     color: #bdbdbd;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    text-decoration: none;
-    color: black;
-    background: white;
-    padding: 15px 35px;
-    border-radius: 40px;
-    font-weight: bold;
+/* SHARED TITLE STYLE */
+
+.about h2,
+.section-title,
+.footer-booking h2,
+footer h3 {
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: #ffffff;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 6px rgba(255,255,255,.35),
+        0 0 18px rgba(255,255,255,.16);
+
+    position: relative;
+    display: block;
+    text-align: center;
 }
 
-/* About */
+/* SMALL UNDERLINE GLOW UNDER TITLES */
+
+.about h2::after,
+.section-title::after,
+.footer-booking h2::after {
+    content: "";
+    display: block;
+    width: 70%;
+    max-width: 280px;
+    height: 1px;
+    margin: 10px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.75),
+        transparent
+    );
+}
+
+/* ABOUT */
 
 .about {
     max-width: 900px;
     margin: auto;
-    padding: 100px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .about h2 {
-    font-family: 'Cinzel', serif;
     font-size: 3rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .about p {
-    line-height: 1.8;
-    color: #ccc;
+    color: #c0c0c0;
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: auto;
 }
 
-/* Slideshow */
+/* FEATURED WORK */
 
 .slideshow-section {
-    padding: 100px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .section-title {
-    font-family: 'Cinzel', serif;
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .slideshow-container {
     position: relative;
-    max-width: 700px;
-    height: 700px;
-    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.06),
+        0 0 60px rgba(0,0,0,.75);
 }
 
 .slide {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     opacity: 0;
-
     transition: opacity 3s ease-in-out;
 }
 
@@ -120,70 +170,86 @@ body {
     opacity: 1;
 }
 
-/* Booking */
-
-.booking {
-    max-width: 700px;
-    margin: auto;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.booking h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    margin-bottom: 40px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-input,
-textarea {
-    background: #111;
-    color: white;
-    border: 1px solid #333;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-button {
-    background: white;
-    color: black;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-/* Footer */
+/* FOOTER */
 
 footer {
     padding: 60px 20px;
     text-align: center;
-    border-top: 1px solid #222;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-booking {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-booking h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.footer-book-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 18px 42px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+}
+
+.footer-book-btn:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 25px rgba(255,255,255,.15),
+        0 0 20px rgba(255,255,255,.12);
 }
 
 footer h3 {
-    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
     margin-bottom: 20px;
 }
+
+/* SOCIAL ICONS */
 
 .socials {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .socials a {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #333;
+    border-radius: 50%;
+
     color: white;
+    font-size: 1.8rem;
     text-decoration: none;
+
+    background: rgba(255,255,255,.02);
+
+    transition: all .3s ease;
 }
 
-/* Reveal Animation */
+.socials a:hover {
+    transform: translateY(-5px);
+    border-color: white;
+    background: rgba(255,255,255,.06);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.15);
+}
+
+/* REVEAL ANIMATION */
 
 .reveal {
     opacity: 0;
@@ -194,4 +260,43 @@ footer h3 {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 55vh;
+    }
+
+    .logo {
+        font-size: 3.8rem;
+        letter-spacing: 1px;
+    }
+
+    .tagline {
+        font-size: .85rem;
+    }
+
+    .slideshow-container {
+        max-width: 350px;
+        height: 350px;
+    }
+
+    .about h2,
+    .section-title,
+    .footer-booking h2 {
+        font-size: 2.3rem;
+    }
+
+    footer h3 {
+        font-size: 2rem;
+    }
+
+    .socials a {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
 }
