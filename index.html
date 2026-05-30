@@ -1,92 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TattsBySean | Tattoo Artist</title>
+    <title>TattsBySean</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- ✅ FIXED PATH TO CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="smoke-bg"></div>
+    <!-- Smoke Background -->
+    <div class="smoke-bg"></div>
 
-  <header class="navbar">
-    <div class="nav-wrapper">
-      <div class="logo">TattsBy<span>Sean</span></div>
-    </div>
-  </header>
+    <!-- Hero -->
+    <section class="hero">
 
-  <section class="hero">
+        <div class="hero-content">
 
-    <div class="hero-content">
+            <h1 class="logo reveal">
+                TattsBySean
+            </h1>
 
-      <h1 class="reveal">Ink With Purpose</h1>
+            <p class="tagline reveal">
+                Custom Black & Grey Tattoos
+            </p>
 
-      <p class="reveal">
-        Black & grey realism, lettering, and custom tattoo designs built to last.
-      </p>
+            <a href="#booking" class="btn reveal">
+                Book Now
+            </a>
 
-      <div class="hero-buttons reveal">
-        <a href="#work" class="btn primary-btn">View Work</a>
-        <a href="#booking" class="btn secondary-btn">Book Now</a>
-      </div>
+        </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- About -->
 
-  <section class="social-gallery reveal" id="work">
+    <section class="about reveal">
 
-    <h2>Latest Work</h2>
+        <h2>About Sean</h2>
 
-    <div class="grid">
-  <img src="images/tattoo1.jpg">
-  <img src="images/tattoo2.jpg">
-  <img src="images/tattoo3.jpg">
-</div>
+        <p>
+            Specializing in custom black and grey tattoo work,
+            realism, lettering, and unique pieces designed specifically
+            for each client.
+        </p>
 
-  </section>
+    </section>
 
-  <section class="tiktok-section reveal">
+    <!-- Slideshow -->
 
-    <h2>Behind the Ink</h2>
+    <section class="slideshow-section reveal">
 
-    <div class="videos">
+        <h2 class="section-title">
+            Featured Work
+        </h2>
 
-      <iframe src="https://www.tiktok.com/embed/v2/VIDEO_ID_1"></iframe>
-      <iframe src="https://www.tiktok.com/embed/v2/VIDEO_ID_2"></iframe>
-      <iframe src="https://www.tiktok.com/embed/v2/VIDEO_ID_3"></iframe>
+        <div class="slideshow-container">
 
-    </div>
+            <img src="images/tattoo1.jpg" class="slide active">
 
-  </section>
+            <img src="images/tattoo2.jpg" class="slide">
 
-  <section class="booking" id="booking">
+            <img src="images/tattoo3.jpg" class="slide">
 
-    <form class="reveal">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Tattoo idea..."></textarea>
-      <button class="btn primary-btn">Send</button>
-    </form>
+        </div>
 
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-logo">TattsBySean</div>
-  </footer>
+    <!-- Booking -->
 
-  <!-- ✅ FIXED PATH TO JS -->
-  <script src="js/script.js"></script>
+    <section id="booking" class="booking reveal">
+
+        <h2>Book a Session</h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Email"
+                required>
+
+            <textarea
+                rows="5"
+                placeholder="Tell me about your tattoo idea">
+            </textarea>
+
+            <button type="submit">
+                Submit Inquiry
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>TattsBySean</h3>
+
+        <div class="socials">
+
+            <a href="https://www.instagram.com/tattsbysean/" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://www.tiktok.com/@tattsbysean" target="_blank">
+                TikTok
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
