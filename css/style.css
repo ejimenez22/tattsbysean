@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&display=swap');
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ body {
     line-height: 1.6;
 }
 
+/* SMOKE BACKGROUND */
 .smoke-bg {
     position: fixed;
     inset: 0;
@@ -25,106 +27,105 @@ body {
         radial-gradient(circle at 20% 20%, rgba(255,255,255,.06), transparent 40%),
         radial-gradient(circle at 80% 60%, rgba(255,255,255,.04), transparent 40%),
         radial-gradient(circle at 50% 90%, rgba(255,255,255,.03), transparent 50%);
-    filter: blur(100px);
+    filter: blur(90px);
     z-index: -1;
 }
 
+/* HERO */
 .hero {
-    min-height: 65vh;
+    min-height: auto;
+    padding: 70px 16px 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
 }
 
 .hero-content {
+    width: 100%;
     max-width: 1000px;
+    margin: 0 auto;
 }
 
 .logo {
     font-family: 'Pirata One', cursive;
-    font-size: clamp(4rem, 9vw, 7rem);
+    font-size: clamp(3.4rem, 15vw, 7rem);
     color: #ffffff;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: .95;
     text-shadow:
         0 0 10px rgba(255,255,255,.25),
         0 0 20px rgba(255,255,255,.10);
 }
 
 .tagline {
-    margin-top: 12px;
-    font-size: 1rem;
+    max-width: 320px;
+    margin: 14px auto 0;
     color: #bdbdbd;
-    letter-spacing: 3px;
+    font-size: .8rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .location {
-    margin-top: 10px;
-
+    margin: 10px auto 0;
     font-family: 'Cinzel', serif;
-
     color: #d4d4d4;
-
-    letter-spacing: 4px;
-
+    letter-spacing: 2px;
     text-transform: uppercase;
-
-    font-size: .95rem;
+    font-size: .75rem;
+    text-align: center;
 }
 
 .specialties {
-    margin-top: 25px;
-
+    width: 100%;
+    max-width: 330px;
+    margin: 24px auto 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
-    gap: 10px;
-
+    gap: 6px;
     color: #bdbdbd;
-
-    letter-spacing: 2px;
-
-    font-size: .9rem;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    line-height: 1.8;
+    text-align: center;
 }
 
 .preview-strip {
-    margin-top: 35px;
-
+    width: 100%;
+    max-width: 300px;
+    margin: 24px auto 0;
     display: flex;
     justify-content: center;
-
-    gap: 15px;
+    align-items: center;
+    gap: 8px;
 }
 
 .preview-strip img {
-    width: 120px;
-    height: 120px;
-
+    width: 88px;
+    height: 88px;
     object-fit: cover;
-
-    border-radius: 12px;
-
+    border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);
-
     transition: all .3s ease;
 }
 
 .preview-strip img:hover {
     transform: translateY(-4px);
-
     border-color: rgba(255,255,255,.4);
 }
 
+/* TITLES */
 .about h2,
 .section-title,
 .footer-booking h2,
 footer h3 {
     font-family: 'Cinzel', serif;
     color: #ffffff;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-align: center;
     text-shadow:
         0 0 6px rgba(255,255,255,.35),
@@ -148,37 +149,44 @@ footer h3 {
     );
 }
 
+/* ABOUT */
 .about {
     max-width: 900px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 40px 18px;
     text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
 }
 
 .about p {
     color: #c0c0c0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     max-width: 750px;
     margin: auto;
 }
 
+/* FEATURED WORK */
 .slideshow-section {
-    padding: 40px 20px;
+    padding: 35px 16px;
     text-align: center;
 }
 
 .section-title {
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 
 .slideshow-container {
     position: relative;
-    width: 100%;
-    max-width: 550px;
-    height: 700px;
+    width: 90vw;
+    max-width: 360px;
+    height: 115vw;
+    max-height: 520px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 18px;
     border: 1px solid rgba(255,255,255,.12);
     box-shadow:
         0 0 20px rgba(255,255,255,.05),
@@ -199,8 +207,9 @@ footer h3 {
     opacity: 1;
 }
 
+/* FOOTER */
 footer {
-    padding: 60px 20px;
+    padding: 50px 18px;
     text-align: center;
     border-top: 1px solid #1a1a1a;
 }
@@ -209,16 +218,16 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
 }
 
 .footer-booking h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 .footer-book-btn {
     display: inline-block;
-    padding: 18px 42px;
+    padding: 16px 38px;
     background: white;
     color: black;
     border-radius: 50px;
@@ -235,26 +244,27 @@ footer {
 }
 
 footer h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 25px;
 }
 
+/* SOCIAL ICONS */
 .socials {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 22px;
 }
 
 .socials a {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #333;
     border-radius: 50%;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-decoration: none;
     background: rgba(255,255,255,.02);
     transition: all .3s ease;
@@ -268,6 +278,7 @@ footer h3 {
         0 0 20px rgba(255,255,255,.15);
 }
 
+/* REVEAL ANIMATION */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -279,52 +290,117 @@ footer h3 {
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+/* TABLETS AND DESKTOP */
+@media (min-width: 769px) {
     .hero {
-        min-height: 55vh;
+        min-height: 65vh;
+        padding: 40px 20px;
     }
 
     .logo {
-        font-size: 3.8rem;
+        font-size: clamp(4rem, 9vw, 7rem);
+        letter-spacing: 2px;
     }
 
     .tagline {
-        font-size: .85rem;
+        max-width: none;
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
+    .location {
+        font-size: .95rem;
+        letter-spacing: 4px;
+    }
+
+    .specialties {
+        max-width: 900px;
+        gap: 10px;
+        font-size: .9rem;
+        letter-spacing: 2px;
+    }
+
+    .preview-strip {
+        max-width: 440px;
+        gap: 15px;
+        margin-top: 35px;
     }
 
     .preview-strip img {
-    width: 90px;
-    height: 90px;
-}
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+    }
 
-.specialties {
-    font-size: .75rem;
-}
-
-.location {
-    font-size: .8rem;
-}
-
-    .slideshow-container {
-    width: 90vw;
-    max-width: 350px;
-    height: 90vw;
-    max-height: 350px;
-}
+    .about {
+        padding: 50px 20px;
+    }
 
     .about h2,
-    .section-title,
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+    }
+
+    .slideshow-section {
+        padding: 40px 20px;
+    }
+
+    .slideshow-container {
+        max-width: 550px;
+        height: 700px;
+        max-height: none;
+    }
+
+    footer {
+        padding: 60px 20px;
+    }
+
     .footer-booking h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     footer h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .socials {
+        gap: 30px;
     }
 
     .socials a {
-        width: 55px;
-        height: 55px;
-        font-size: 1.5rem;
+        width: 65px;
+        height: 65px;
+        font-size: 1.8rem;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 380px) {
+    .logo {
+        font-size: 3rem;
+    }
+
+    .preview-strip {
+        max-width: 270px;
+        gap: 6px;
+    }
+
+    .preview-strip img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .specialties {
+        max-width: 285px;
+        font-size: .65rem;
+    }
+
+    .slideshow-container {
+        width: 92vw;
+        height: 118vw;
     }
 }
