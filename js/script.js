@@ -46,19 +46,41 @@ function nextSlide() {
     slides[currentSlide].classList.add('active');
 }
 
-// Ensure first image is active
-
 if (slides.length > 0) {
     slides[0].classList.add('active');
 }
 
-// Change image every 8 seconds
-
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 8000);
 
 
 // ======================
-// CONSOLE MESSAGE
+// PREVIEW IMAGE LIGHTBOX
 // ======================
 
-console.log('TattsBySean website loaded successfully');
+const previewImages = document.querySelectorAll('.preview-strip img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const closeLightbox = document.querySelector('.close-lightbox');
+
+previewImages.forEach((image) => {
+
+    image.addEventListener('click', () => {
+
+        lightbox.classList.add('active');
+        lightboxImage.src = image.src;
+
+    });
+
+});
+
+closeLightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', (e) => {
+
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+    }
+
+});

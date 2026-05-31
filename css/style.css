@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&display=swap');
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,6 @@ body {
     line-height: 1.6;
 }
 
-/* SMOKE BACKGROUND */
 .smoke-bg {
     position: fixed;
     inset: 0;
@@ -31,7 +29,6 @@ body {
     z-index: -1;
 }
 
-/* HERO */
 .hero {
     min-height: auto;
     padding: 70px 16px 45px;
@@ -69,13 +66,62 @@ body {
 }
 
 .location {
-    margin: 10px auto 0;
+    margin-top: 18px;
+    text-align: center;
+}
+
+.shop {
     font-family: 'Cinzel', serif;
-    color: #d4d4d4;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.city {
+    margin-top: 6px;
+    color: #d4d4d4;
     font-size: .75rem;
-    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.address {
+    margin-top: 12px;
+    color: #bdbdbd;
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+.phone {
+    margin-top: 10px;
+}
+
+.phone a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.phone a:hover {
+    opacity: .8;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d4d4d4;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    transition: .3s ease;
+    font-size: .85rem;
+}
+
+.map-link:hover {
+    color: white;
+    border-bottom-color: white;
 }
 
 .specialties {
@@ -110,15 +156,18 @@ body {
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);
+    cursor: pointer;
     transition: all .3s ease;
 }
 
 .preview-strip img:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255,255,255,.4);
+    transform: scale(1.08);
+    border-color: rgba(255,255,255,.6);
+    box-shadow:
+        0 0 20px rgba(255,255,255,.12),
+        0 10px 25px rgba(0,0,0,.5);
 }
 
-/* TITLES */
 .about h2,
 .section-title,
 .footer-booking h2,
@@ -149,7 +198,6 @@ footer h3 {
     );
 }
 
-/* ABOUT */
 .about {
     max-width: 900px;
     margin: auto;
@@ -168,7 +216,6 @@ footer h3 {
     margin: auto;
 }
 
-/* FEATURED WORK */
 .slideshow-section {
     padding: 35px 16px;
     text-align: center;
@@ -207,7 +254,6 @@ footer h3 {
     opacity: 1;
 }
 
-/* FOOTER */
 footer {
     padding: 50px 18px;
     text-align: center;
@@ -248,7 +294,6 @@ footer h3 {
     margin-bottom: 25px;
 }
 
-/* SOCIAL ICONS */
 .socials {
     display: flex;
     justify-content: center;
@@ -278,7 +323,38 @@ footer h3 {
         0 0 20px rgba(255,255,255,.15);
 }
 
-/* REVEAL ANIMATION */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 88vh;
+    border-radius: 16px;
+    box-shadow:
+        0 0 40px rgba(255,255,255,.1);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -290,7 +366,6 @@ footer h3 {
     transform: translateY(0);
 }
 
-/* TABLETS AND DESKTOP */
 @media (min-width: 769px) {
     .hero {
         min-height: 65vh;
@@ -308,9 +383,21 @@ footer h3 {
         letter-spacing: 3px;
     }
 
-    .location {
+    .shop {
+        font-size: 1.1rem;
+    }
+
+    .city {
         font-size: .95rem;
         letter-spacing: 4px;
+    }
+
+    .address {
+        font-size: .9rem;
+    }
+
+    .map-link {
+        font-size: .9rem;
     }
 
     .specialties {
@@ -378,7 +465,6 @@ footer h3 {
     }
 }
 
-/* VERY SMALL PHONES */
 @media (max-width: 380px) {
     .logo {
         font-size: 3rem;
