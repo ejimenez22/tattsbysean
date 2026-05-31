@@ -54,7 +54,7 @@ if (slides.length > 0) {
 
 // Change image every 8 seconds
 
-setInterval(nextSlide, 8000);
+setInterval(nextSlide, 5000);
 
 
 // ======================
