@@ -1,243 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background: #050505;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #f5f5f5;
+    font-family: 'Cinzel', serif;
     overflow-x: hidden;
-    line-height: 1.6;
 }
 
 .smoke-bg {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.06), transparent 40%),
-        radial-gradient(circle at 80% 60%, rgba(255,255,255,.04), transparent 40%),
-        radial-gradient(circle at 50% 90%, rgba(255,255,255,.03), transparent 50%);
-    filter: blur(90px);
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 30%),
+        radial-gradient(circle at 80% 40%, rgba(255,255,255,0.04), transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(255,255,255,0.05), transparent 40%),
+        #050505;
     z-index: -1;
 }
 
 .hero {
-    min-height: auto;
-    padding: 70px 16px 45px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 20px;
     text-align: center;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .logo {
     font-family: 'Pirata One', cursive;
-    font-size: clamp(3.4rem, 15vw, 7rem);
-    color: #ffffff;
-    letter-spacing: 1px;
-    line-height: .95;
-    text-shadow:
-        0 0 10px rgba(255,255,255,.25),
-        0 0 20px rgba(255,255,255,.10);
+    font-size: clamp(4rem, 12vw, 9rem);
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255,255,255,0.35);
 }
 
 .tagline {
-    max-width: 320px;
-    margin: 14px auto 0;
-    color: #bdbdbd;
-    font-size: .8rem;
-    letter-spacing: 2px;
+    font-size: 1.4rem;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    text-align: center;
+    margin-top: 10px;
+    color: #c9c9c9;
 }
 
 .location {
-    margin-top: 18px;
-    text-align: center;
+    margin-top: 35px;
+    line-height: 1.7;
 }
 
 .shop {
-    font-family: 'Cinzel', serif;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .city {
-    margin-top: 6px;
-    color: #d4d4d4;
-    font-size: .75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color: #bfbfbf;
 }
 
 .address {
-    margin-top: 12px;
-    color: #bdbdbd;
-    font-size: .85rem;
-    line-height: 1.6;
-}
-
-.phone {
     margin-top: 10px;
+    color: #d8d8d8;
 }
 
 .phone a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    transition: .3s ease;
-}
-
-.phone a:hover {
-    opacity: .8;
+    font-weight: 700;
 }
 
 .map-link {
     display: inline-block;
-    margin-top: 12px;
-    color: #d4d4d4;
+    margin-top: 15px;
+    padding: 10px 22px;
+    border: 1px solid #fff;
+    color: #fff;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,.3);
-    transition: .3s ease;
-    font-size: .85rem;
+    transition: 0.3s ease;
 }
 
 .map-link:hover {
-    color: white;
-    border-bottom-color: white;
+    background: #fff;
+    color: #050505;
 }
 
 .specialties {
-    width: 100%;
-    max-width: 330px;
-    margin: 24px auto 0;
+    margin-top: 35px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 14px;
     flex-wrap: wrap;
-    gap: 6px;
-    color: #bdbdbd;
-    letter-spacing: 1px;
-    font-size: .7rem;
-    line-height: 1.8;
-    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    color: #ccc;
 }
 
 .preview-strip {
-    width: 100%;
-    max-width: 300px;
-    margin: 24px auto 0;
+    margin-top: 45px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 8px;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
 .preview-strip img {
-    width: 88px;
-    height: 88px;
+    width: 180px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,.15);
-    cursor: pointer;
-    transition: all .3s ease;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
 }
 
 .preview-strip img:hover {
-    transform: scale(1.08);
-    border-color: rgba(255,255,255,.6);
-    box-shadow:
-        0 0 20px rgba(255,255,255,.12),
-        0 10px 25px rgba(0,0,0,.5);
-}
-
-.about h2,
-.section-title,
-.footer-booking h2,
-footer h3 {
-    font-family: 'Cinzel', serif;
-    color: #ffffff;
-    letter-spacing: 2px;
-    text-align: center;
-    text-shadow:
-        0 0 6px rgba(255,255,255,.35),
-        0 0 18px rgba(255,255,255,.12);
-    margin-bottom: 20px;
-}
-
-.about h2::after,
-.section-title::after,
-.footer-booking h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 1px;
-    margin: 12px auto 0;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255,255,255,.8),
-        transparent
-    );
+    transform: translateY(-8px) scale(1.03);
 }
 
 .about {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 18px;
+    padding: 90px 20px;
     text-align: center;
 }
 
-.about h2 {
-    font-size: 2rem;
+.about h2,
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .about p {
-    color: #c0c0c0;
-    font-size: 1rem;
-    max-width: 750px;
-    margin: auto;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #d0d0d0;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .slideshow-section {
-    padding: 35px 16px;
+    padding: 90px 20px;
     text-align: center;
-}
-
-.section-title {
-    font-size: 2rem;
 }
 
 .slideshow-container {
     position: relative;
-    width: 90vw;
-    max-width: 360px;
-    height: 115vw;
-    max-height: 520px;
-    margin: 0 auto;
+    max-width: 900px;
+    height: 650px;
+    margin: 40px auto 0;
     overflow: hidden;
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,.12);
-    box-shadow:
-        0 0 20px rgba(255,255,255,.05),
-        0 0 60px rgba(0,0,0,.75);
+    background: #000;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.75);
 }
 
 .slide {
@@ -245,93 +160,107 @@ footer h3 {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0;
-    transition: opacity 4s ease-in-out;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    cursor: pointer;
 }
 
 .slide.active {
     opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 2rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.prev-btn {
+    left: 18px;
+}
+
+.next-btn {
+    right: 18px;
 }
 
 footer {
-    padding: 50px 18px;
+    padding: 80px 20px 40px;
     text-align: center;
-    border-top: 1px solid #1a1a1a;
-}
-
-.footer-booking {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 42px;
+    background: rgba(0,0,0,0.45);
 }
 
 .footer-booking h2 {
     font-size: 2rem;
+    margin-bottom: 25px;
 }
 
 .footer-book-btn {
     display: inline-block;
-    padding: 16px 38px;
-    background: white;
-    color: black;
-    border-radius: 50px;
+    padding: 14px 42px;
+    border: 1px solid #fff;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: all .3s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.3s ease;
 }
 
 .footer-book-btn:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 10px 25px rgba(255,255,255,.15);
+    background: #fff;
+    color: #050505;
 }
 
 footer h3 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
+    margin-top: 50px;
+    font-size: 2rem;
+    font-family: 'Pirata One', cursive;
 }
 
 .socials {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 22px;
+    gap: 25px;
 }
 
 .socials a {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    background: rgba(255,255,255,.02);
-    transition: all .3s ease;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
 }
 
 .socials a:hover {
     transform: translateY(-5px);
-    border-color: white;
-    background: rgba(255,255,255,.06);
-    box-shadow:
-        0 0 20px rgba(255,255,255,.15);
+    color: #cfcfcf;
 }
 
 .lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.92);
+    background: rgba(0,0,0,0.93);
     display: none;
     justify-content: center;
     align-items: center;
+    padding: 25px;
     z-index: 9999;
-    padding: 20px;
 }
 
 .lightbox.active {
@@ -340,25 +269,29 @@ footer h3 {
 
 .lightbox img {
     max-width: 95%;
-    max-height: 88vh;
-    border-radius: 16px;
-    box-shadow:
-        0 0 40px rgba(255,255,255,.1);
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 .close-lightbox {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
+    top: 25px;
+    right: 35px;
+    color: #fff;
     font-size: 3rem;
     cursor: pointer;
+    z-index: 10000;
+}
+
+.close-lightbox:hover {
+    color: #aaa;
 }
 
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all .8s ease;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.active {
@@ -366,127 +299,66 @@ footer h3 {
     transform: translateY(0);
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .hero {
-        min-height: 65vh;
-        padding: 40px 20px;
-    }
-
-    .logo {
-        font-size: clamp(4rem, 9vw, 7rem);
-        letter-spacing: 2px;
+        padding: 45px 18px;
     }
 
     .tagline {
-        max-width: none;
         font-size: 1rem;
-        letter-spacing: 3px;
-    }
-
-    .shop {
-        font-size: 1.1rem;
-    }
-
-    .city {
-        font-size: .95rem;
         letter-spacing: 4px;
     }
 
-    .address {
-        font-size: .9rem;
-    }
-
-    .map-link {
-        font-size: .9rem;
-    }
-
     .specialties {
-        max-width: 900px;
-        gap: 10px;
-        font-size: .9rem;
-        letter-spacing: 2px;
-    }
-
-    .preview-strip {
-        max-width: 440px;
-        gap: 15px;
-        margin-top: 35px;
+        gap: 8px;
+        font-size: 0.8rem;
     }
 
     .preview-strip img {
-        width: 120px;
-        height: 120px;
-        border-radius: 12px;
+        width: 30%;
+        height: 160px;
     }
 
-    .about {
-        padding: 50px 20px;
+    .slideshow-container {
+        height: 520px;
+    }
+
+    .carousel-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.5rem;
+    }
+
+    .prev-btn {
+        left: 8px;
+    }
+
+    .next-btn {
+        right: 8px;
+    }
+
+    .about,
+    .slideshow-section {
+        padding: 65px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preview-strip img {
+        width: 31%;
+        height: 125px;
+    }
+
+    .slideshow-container {
+        height: 430px;
     }
 
     .about h2,
     .section-title {
-        font-size: 2.8rem;
-    }
-
-    .about p {
-        font-size: 1.1rem;
-    }
-
-    .slideshow-section {
-        padding: 40px 20px;
-    }
-
-    .slideshow-container {
-        max-width: 550px;
-        height: 700px;
-        max-height: none;
-    }
-
-    footer {
-        padding: 60px 20px;
-    }
-
-    .footer-booking h2 {
-        font-size: 2.3rem;
-    }
-
-    footer h3 {
         font-size: 2rem;
     }
 
-    .socials {
-        gap: 30px;
-    }
-
-    .socials a {
-        width: 65px;
-        height: 65px;
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 380px) {
-    .logo {
-        font-size: 3rem;
-    }
-
-    .preview-strip {
-        max-width: 270px;
-        gap: 6px;
-    }
-
-    .preview-strip img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .specialties {
-        max-width: 285px;
-        font-size: .65rem;
-    }
-
-    .slideshow-container {
-        width: 92vw;
-        height: 118vw;
+    .footer-booking h2 {
+        font-size: 1.5rem;
     }
 }
